@@ -21,11 +21,12 @@ function setImage(){
   }
 }
 
+$(document.body).on('touchmove', onScroll); // for mobile
+$(window).on('scroll', onScroll);
 
-function displayCarouselOnScroll(){
-  $('#carousel').scrollIntoView({
-    behavior: instant;
+// callback
+function onScroll(){
+    if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) {
+        document.getElementById("carousel")
+    }
 }
-if (document.body.scroll -= 20) {
-  displayCarouselOnScroll();
-});
