@@ -1,3 +1,5 @@
+$('.image_carousel').hide()
+
 window.setInterval(setImage(), 5000)
 
 function setImage(){
@@ -10,23 +12,31 @@ function setImage(){
   bedTime.setHours(18);
   bedTime.setMinutes(30);
 
-  if(nowDate < wakeTime && nowDate > bedTime){
-    document.getElementById("nightTime").style.display = "block";
-    document.getEleme99999999999ntById("nightTime-link").style.display = "block";
-  }else if (nowDate > wakeTime && nowDate < bedTime) {
-    document.getElementById('nightTime').style.display = "none";
-    document.getElementById('dayTime').style.display = 'block';
+  if(nowDate > wakeTime && nowDate < bedTime) {
+    $('body').css('background', 'url("img/louisvilleDaytime.jpeg") no-repeat');
+    $('body').css('background-size', 'cover');
     document.getElementById('nightTime-link').style.display= "none";
     document.getElementById('dayTime-link').style.display = "block";
-  }
-}
-
-$(document.body).on('touchmove', onScroll); // for mobile
-$(window).on('scroll', onScroll);
-
-// callback
-function onScroll(){
-    if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) {
-        document.getElementById("carousel")
+ }
+if(nowDate < wakeTime && nowDate > bedTime){
+      $('body').css('background', 'url("img/louisvilleDaytime.jpeg") no-repeat');
+      $('body').css('background-size', 'cover');
+      document.getElementById("nightTime-link").style.display = "block";
     }
-}
+  }
+
+
+// Carousel menu SHOULD slide up (according to Stephan)
+if(window.matchMedia("(max-width: 1080px)").matches){
+  $('body').on('touchstart', function(){
+    $('.image_carousel').show("slide", {direction:'up'}, 2000)
+  })
+
+  // {
+
+
+  //   location.href = "#image_carousel";
+  // })if (location.href === "#image_carousel") {
+  //   location.href = "#";
+  // }
+};
