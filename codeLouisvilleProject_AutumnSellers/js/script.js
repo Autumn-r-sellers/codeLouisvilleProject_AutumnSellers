@@ -1,4 +1,6 @@
-$('.image_carousel').hide()
+// Sets the background of the opening div based upon the time of day
+$('navigation-container').hide();
+
 
 window.setInterval(setImage(), 5000)
 
@@ -12,31 +14,26 @@ function setImage(){
   bedTime.setHours(18);
   bedTime.setMinutes(30);
 
-  if(nowDate > wakeTime && nowDate < bedTime) {
-    $('body').css('background', 'url("img/louisvilleDaytime.jpeg") no-repeat');
-    $('body').css('background-size', 'cover');
-    document.getElementById('nightTime-link').style.display= "none";
-    document.getElementById('dayTime-link').style.display = "block";
- }
-if(nowDate < wakeTime && nowDate > bedTime){
-      $('body').css('background', 'url("img/louisvilleDaytime.jpeg") no-repeat');
-      $('body').css('background-size', 'cover');
-      document.getElementById("nightTime-link").style.display = "block";
+if(nowDate > wakeTime && nowDate < bedTime){
+      document.getElementById('nightTime').style.display = "none"
+      document.getElementById('dayTime').style.display = "block"
+      document.getElementById("dayTime-link").style.display = "block";
+      document.getElementById('nightTime-link').style.display = "none"
     }
   }
 
-
-// Carousel menu SHOULD slide up (according to Stephan)
+// Control navigation, jump to carousel menu
+// Currently, if you click anywhere twice in the page, then it will
+// go down to carousel menu.
+// Goal is to have the page jump to the menu on swipe
+// for mobile devices and on one or two finger scroll
+// for tablets.
+// This function is not needed for desktop view so the media query
+// makes it not active in screens larger than large tablets.
 if(window.matchMedia("(max-width: 1080px)").matches){
-  $('body').on('touchstart', function(){
-    $('.image_carousel').show("slide", {direction:'up'}, 2000)
+  $("#navigation-container").hide();
+
+  $('body').on('touchend click', ".louisvilleImage", function(){
+    $(location).attr('href', '#image_carousel')
   })
-
-  // {
-
-
-  //   location.href = "#image_carousel";
-  // })if (location.href === "#image_carousel") {
-  //   location.href = "#";
-  // }
-};
+}
