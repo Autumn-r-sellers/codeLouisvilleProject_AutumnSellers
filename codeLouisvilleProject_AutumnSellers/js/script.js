@@ -17,7 +17,8 @@ if(nowDate > wakeTime && nowDate < bedTime){
       document.getElementById('nightTime').style.display = "none"
       document.getElementById('dayTime').style.display = "block"
       document.getElementById("dayTime-link").style.display = "block";
-      document.getElementById('nightTime-link').style.display = "none"
+      document.getElementById('nightTime-link').style.display = "none";
+      document.getElementById('dayTime').style.backgroundColor = 'skyblue';
     }
   }
 
@@ -29,9 +30,8 @@ if(window.matchMedia("(max-width: 900px)").matches){
   $(location).attr('href', '#image_carousel')
   })
 }
-if(window.matchMedia("(min-width: 900px)").matches){
+if(window.matchMedia("(min-width: 800px)").matches){
   $('body').ready(function(){
     $('#navigation-container').fadeIn('slow');
-
   })
 }

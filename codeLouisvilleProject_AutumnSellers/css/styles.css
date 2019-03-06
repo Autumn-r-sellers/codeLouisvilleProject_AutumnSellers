@@ -8,15 +8,13 @@ html{
   background-color: black;
 }
 body{
+  background-color: black;
 }
 li{
   list-style: none;
   color: white;
 }
-a,
-a:hover {
-  text-decoration: none;
-}
+
 
 /****** Base styles ********/
 
@@ -56,17 +54,26 @@ a:hover {
     /******* Transitioning photo of Louisville******/
 
         .louisvilleImage{
-          width: 100%;
+          width: auto;
+          overflow: none;
           height: 100vh;
-          text-align: center;
+          text-align: right;
 
         }
 
+        #nightTime{
+          object-fit: fill;
+          background-color: black;
+          }
         #dayTime{
+          object-fit: fill;
           display: none;
         }
 
     /*******Carousel menu ***********/
+    .image_carousel{
+      width: auto;
+    }
     .carousel-caption{
       background-color: rgba(0, 0, 0, .4);
       border-radius: 10px;
@@ -92,22 +99,23 @@ a:hover {
       .image_carousel{
         display: none;
       }
+      #navigation-container{
+          background: rgba(0,0,0,.5);
+          float: left;
+          display: inline;
+          height: 100vh;
+          width: 40%;
+          position: fixed;
+          z-index: 2500;
+          font-size: 3em;
+          line-height: 3.5em;
+        }
 
     }
 
-    @media (min-width: 1000px) {
-    #navigation-container{
-        background: rgba(0,0,0,.5);
-        float: left;
-        display: inline;
-        height: 100vh;
-        border-radius: 4px 400px 400px 4px;
-        width: 30%;
-        text-decoration: none;
-        position: fixed;
-        z-index: 2500;
-        font-size: 3em;
-        line-height: 3.5em;
-
+    @media (min-width: 1300px) {
+      #navigation-container{
+        width: 44%;
+        text-align: center;
       }
     }
