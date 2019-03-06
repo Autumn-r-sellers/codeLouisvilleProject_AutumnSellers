@@ -1,7 +1,6 @@
+$("#navigation-container").hide();
+
 // Sets the background of the opening div based upon the time of day
-$('navigation-container').hide();
-
-
 window.setInterval(setImage(), 5000)
 
 function setImage(){
@@ -23,17 +22,16 @@ if(nowDate > wakeTime && nowDate < bedTime){
   }
 
 // Control navigation, jump to carousel menu
-// Currently, if you click anywhere twice in the page, then it will
-// go down to carousel menu.
-// Goal is to have the page jump to the menu on swipe
-// for mobile devices and on one or two finger scroll
-// for tablets.
 // This function is not needed for desktop view so the media query
 // makes it not active in screens larger than large tablets.
-if(window.matchMedia("(max-width: 1080px)").matches){
-  $("#navigation-container").hide();
-
+if(window.matchMedia("(max-width: 900px)").matches){
   $('body').on('touchend click', ".louisvilleImage", function(){
-    $(location).attr('href', '#image_carousel')
+  $(location).attr('href', '#image_carousel')
+  })
+}
+if(window.matchMedia("(min-width: 900px)").matches){
+  $('body').ready(function(){
+    $('#navigation-container').fadeIn('slow');
+
   })
 }
