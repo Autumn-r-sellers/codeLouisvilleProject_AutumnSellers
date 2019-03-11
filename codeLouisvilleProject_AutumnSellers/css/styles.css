@@ -5,10 +5,10 @@
 
 html{
   scroll-behavior: smooth;
-  background-color: black;
 }
 body{
-  background-color: black;
+
+
 }
 li{
   list-style: none;
@@ -54,10 +54,9 @@ li{
     /******* Transitioning photo of Louisville******/
 
         .louisvilleImage{
-          width: auto;
-          overflow: none;
           height: 100vh;
           text-align: right;
+          overflow: none;
 
         }
 
@@ -70,33 +69,29 @@ li{
           display: none;
         }
 
-    /*******Carousel menu ***********/
-    .image_carousel{
-      width: auto;
-    }
-    .carousel-caption{
-      background-color: rgba(0, 0, 0, .4);
-      border-radius: 10px;
-      line-height: 1.7em;
-      letter-spacing: .05em;
-    }
+        /*******Carousel menu ***********/
+           .carousel-caption{
+             background-color: rgba(0, 0, 0, .4);
+             border-radius: 10px;
+             line-height: 1.7em;
+             letter-spacing: .05em;
+           }
 
-    .carousel-caption{
-      text-align: center;
-      vertical-align: center;
-    }
+           .carousel-caption{
+             text-align: center;
+             vertical-align: center;
+           }
+/*******Clearfix *********/
 
-    /*******Clearfix *********/
-
-    .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-    }
+        .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
 
 /*******Media Queries******************************************************/
     @media (min-width: 800px) {
-      .image_carousel{
+      #image_carousel{
         display: none;
       }
       #navigation-container{
@@ -116,6 +111,10 @@ li{
     @media (min-width: 1300px) {
       #navigation-container{
         width: 44%;
-        text-align: center;
+        text-align: left;
+      }
+
+      .louisvilleImage{
+        max-width: 90%;
       }
     }

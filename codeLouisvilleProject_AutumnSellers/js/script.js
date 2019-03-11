@@ -22,6 +22,7 @@ if(nowDate > wakeTime && nowDate < bedTime){
     }
   }
 
+
 // Control navigation, jump to carousel menu
 // This function is not needed for desktop view so the media query
 // makes it not active in screens larger than large tablets.
