@@ -17,7 +17,9 @@ li{
 
 
 /****** Base styles ********/
-
+  #navigation-container{
+    display: none;
+  }
 
   /***** main container ******/
     .myContainer{
@@ -55,15 +57,17 @@ li{
 
         .louisvilleImage{
           height: 100vh;
+          width: 100%;
+          
           text-align: right;
           overflow: none;
-
         }
 
         #nightTime{
           object-fit: fill;
           background-color: black;
           }
+
         #dayTime{
           object-fit: fill;
           display: none;
@@ -81,6 +85,26 @@ li{
              text-align: center;
              vertical-align: center;
            }
+/******Form Styles *********/
+.form{
+  background:
+  radial-gradient(
+    #b92b2750,
+    #1565C050
+    ),
+   url(../img/form-background.jpg);
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+}
+
+.border{
+  border-radius: 5px;
+  padding: .75em;
+}
+
 /*******Clearfix *********/
 
         .clearfix::after {
@@ -104,17 +128,35 @@ li{
           z-index: 2500;
           font-size: 3em;
           line-height: 3.5em;
+          vertical-align: center;
         }
 
     }
 
-    @media (min-width: 1300px) {
+    @media (min-width: 2300px) {
       #navigation-container{
-        width: 44%;
+        width: 20%;
         text-align: left;
       }
 
       .louisvilleImage{
-        max-width: 90%;
+        width: 100%;
+        text-align: right;
       }
+
+      #nightTime{
+        width: 90%;
+
+        }
+
+      #dayTime{
+        width: 90%;
+        display: none;
+      }
+    }
+
+    @media (min-width: 1500px){
+    #navigation-container{
+      width: 18%;
+
     }
