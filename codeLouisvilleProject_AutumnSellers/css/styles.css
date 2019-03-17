@@ -52,13 +52,18 @@ li{
     .link{
       display: block;
     }
-
+    .margin-top{
+      color: white;
+      margin-top: 30px;
+      margin-bottom: -30px;
+      letter-spacing: .05em;
+    }
     /******* Transitioning photo of Louisville******/
 
         .louisvilleImage{
           height: 100vh;
           width: 100%;
-          
+
           text-align: right;
           overflow: none;
         }
