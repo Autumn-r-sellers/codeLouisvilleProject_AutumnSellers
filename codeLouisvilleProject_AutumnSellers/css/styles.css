@@ -21,6 +21,7 @@ li{
     display: none;
   }
 
+
   /***** main container ******/
     .myContainer{
       width: 100%;
@@ -58,6 +59,7 @@ li{
       margin-bottom: -30px;
       letter-spacing: .05em;
     }
+
     /******* Transitioning photo of Louisville******/
 
         .louisvilleImage{
@@ -124,7 +126,7 @@ li{
         display: none;
       }
       #navigation-container{
-          background: rgba(0,0,0,.5);
+          background: rgba(0,0,0,.7);
           float: left;
           display: inline;
           height: 100vh;
@@ -136,12 +138,32 @@ li{
           vertical-align: center;
         }
 
+
+        .information-wrapper{
+          max-width: 50%;
+          height: 50%;
+          float: right;
+          margin-left: 40%;
+          margin-top: 10%;
+          position: absolute;
+          z-index: 24;
+          padding:20px;
+          background: rgba(0,0,0,.7);
+          color: white;
+          line-height: 1.5em;
+          letter-spacing: .05em;
+        }
+        .no_show{
+          display: none;
+        }
+
     }
 
     @media (min-width: 2300px) {
       #navigation-container{
         width: 20%;
         text-align: left;
+
       }
 
       .louisvilleImage{

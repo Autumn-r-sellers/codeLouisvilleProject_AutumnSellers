@@ -1,4 +1,6 @@
 $("#navigation-container").hide();
+$("#aboutSection").hide()
+
 
 // Sets the background of the opening div based upon the time of day
 window.setInterval(setImage(), 5000)
@@ -30,9 +32,20 @@ if(window.matchMedia("(max-width: 900px)").matches){
   $('body').on('touchend click', ".louisvilleImage", function(){
   $(location).attr('href', '#image_carousel')
   })
-}
+
+window.onresize = function(){
 if(window.matchMedia("(min-width: 800px)").matches){
   $('body').ready(function(){
     $('#navigation-container').fadeIn('slow');
   })
 }
+}
+  }
+
+$("#about").on("click", function(){
+  $("#aboutSection").toggleClass("information-wrapper no_show")
+
+});
+$("#portfolio").on("click", function(){
+  $("#portfolioSection").toggleClass("information-wrapper no_show")
+});
