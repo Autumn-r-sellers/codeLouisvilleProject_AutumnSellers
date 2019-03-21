@@ -1,7 +1,3 @@
-$("#navigation-container").hide();
-$("#aboutSection").hide()
-
-
 // Sets the background of the opening div based upon the time of day
 window.setInterval(setImage(), 5000)
 
@@ -28,23 +24,24 @@ if(nowDate > wakeTime && nowDate < bedTime){
 // Control navigation, jump to carousel menu
 // This function is not needed for desktop view so the media query
 // makes it not active in screens larger than large tablets.
+
 if(window.matchMedia("(max-width: 900px)").matches){
   $('body').on('touchend click', ".louisvilleImage", function(){
   $(location).attr('href', '#image_carousel')
   })
+}
 
+//Allows the navigation menu to smoothly display at 800px and above
 window.onresize = function(){
 if(window.matchMedia("(min-width: 800px)").matches){
   $('body').ready(function(){
     $('#navigation-container').fadeIn('slow');
   })
-}
-}
-  }
+}}
 
+// Controls the displaying of the menu information
 $("#about").on("click", function(){
   $("#aboutSection").toggleClass("information-wrapper no_show")
-
 });
 $("#portfolio").on("click", function(){
   $("#portfolioSection").toggleClass("information-wrapper no_show")
