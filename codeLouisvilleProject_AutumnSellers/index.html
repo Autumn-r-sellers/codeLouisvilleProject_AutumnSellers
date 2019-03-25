@@ -22,38 +22,39 @@
            </section>
 
       <!--- Navigation menu  ---------->
-      <nav id="navigation-container" >
-        <ul class= "noUnderLine">
+      <nav id="navigation-container" class="hide" >
+        <ul class="noUnderLine">
           <a href="#"class="text-decoration-none" id="about"><li>About</li></a>
           <a href="#" class="text-decoration-none" id="portfolio"><li>Portfolio</li></a>
           <a href="#" class="text-decoration-none" id="contact"><li>Contact</li></a>
         </ul>
       </nav>
 
-
-      <!--- information section  -->
-      <!-- <div id="aboutSection" class="no_show">
-        <h2>About Clayton</h2>
-        <p>Clayton pace is a designer based in the Louisville, Kentucky area. His passion for graphic design is based in layout designs, rebranding and logo design. </p>
-      </div>
-
-      <div id="portfolioSection" class="no_show">
-        <h2>Clayton's Portfolio</h2>
-        <img class="">
-      </div> -->
-
       <!--- Image of louisville that transitions based on time --------->
-      <section class="louisvilleImage">
+      <section class="louisvilleImage hide show_media_querie" id="background_div">
         <section id="nightTime">
           <img src="img/louisvilleNighttime.jpg" class="louisvilleImage" >
         </section>
-        <section id="dayTime">
+        <section id="dayTime" class="hide">
           <img src="img/louisvilleDaytime.jpeg" alt="" class="louisvilleImage">
         </section>
       </section>
 
+      <!--- information section  -->
+      <div id="aboutSection" class="no_show hide show_media_querie">
+        <h2>About Clayton</h2>
+        <p>Clayton pace is a designer based in the Louisville, Kentucky area. His passion for graphic design is based in layout designs, rebranding and logo design. </p>
+      </div>
+
+      <div id="portfolioSection" class="no_show hide show_media_querie">
+        <h2>Clayton's Portfolio</h2>
+        <img class="">
+      </div>
+
+
+
       <!-- Carousel navigation ---------------->
-      <div id="image_carousel">
+      <div id="image_carousel" class="hide_media_querie">
          <div class="bd-example">
          <div class="bd-exampleimage_carousel">
            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -64,34 +65,29 @@
              </ol>
              <div class="carousel-inner">
                <div class="carousel-item active">
-                 <img src="img/main_bio_image.jpg" class="d-block w-100 vh-100" alt="...">
-                 <div class="carousel-caption d-md-block">
-                   <h5>About Me</h5>
-                   <p>Clayton pace is a designer based in the Louisville, Kentucky area. His passion for graphic design is based in layout designs, rebranding and logo design.</p>
-                   <h5>About Clayton</h5>
-                 </div>
+                 <!--- Image of louisville that transitions based on time --------->
+                 <section class="louisvilleImage">
+                   <section id="nightTime-carousel">
+                     <img src="img/louisvilleNighttime.jpg" class="louisvilleImage" >
+                   </section>
+                   <section id="dayTime-carousel">
+                     <img src="img/louisvilleDaytime.jpeg" alt="" class="louisvilleImage">
+                   </section>
+                 </section>
                </div>
                <div class="carousel-item">
-                 <img src="img/retail_redesign.jpg" class="d-block w-100 vh-100" alt="...">
+                 <img src="img/main_bio_image.jpg" class="d-block w-100 vh-100" alt="...">
                  <div class="carousel-caption d-md-block">
-                   <h5>Second slide label</h5>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                   <h5>Clayton's Portfolio</h5>
+                   <h5>About Clayton</h5>
+                   <p>Clayton pace is a designer based in the Louisville, Kentucky area. His passion for graphic design is based in layout designs, rebranding and logo design.</p>
                  </div>
                </div>
-               <div class="carousel-item vh-100 form">
-                 <div class="container ">
-                   <h2 class="margin-top">Contact Me</h2>
-                   <form>
-                     <br /><br />
-                     <input class="border" type="text" name="firstname" placeholder="First Name..." /><br>
-                     <br />
-                     <input  class="border"type="text" name="lastname" placeholder="Last Name..." /><br />
-                     <br />
-                     <input class="border" type="email" name="email" placeholder="Email..." /><br /><br />
-                     <textarea class="border" rows="5" cols="30" name="message" placeholder="Enter text here..."></textarea><br /><br />
-                     <button href"#" class="form-button border">Send me a message</button>
-                   </form>
+               <div class="carousel-item vh-100">
+                 <img src="img/retail_redesign.jpg" class="d-block w-100 vh-100" alt="...">
+                 <div class="carousel-caption d-md-block">
+                   <h5>Clayton's Portfolio</h5>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
                  </div>
                </div>
              </div>
@@ -108,6 +104,20 @@
        </div>
    </div>
 
+   <!--CONTACT FORM  -->
+   <div class="vh-100 form hide_media_querie" id="contact_me">
+     <h2 class="margin-top">Contact Me</h2>
+     <form>
+       <br /><br />
+       <input class="border" type="text" name="firstname" placeholder="First Name..." /><br>
+       <br />
+       <input  class="border"type="text" name="lastname" placeholder="Last Name..." /><br />
+       <br />
+       <input class="border" type="email" name="email" placeholder="Email..." /><br /><br />
+       <textarea class="border" rows="5" cols="30" name="message" placeholder="Enter text here..."></textarea><br /><br />
+       <button href"#" class="form-button border">Send me a message</button>
+     </form>
+   </div>
 
 <!-- Bootstrap CDN -->
 
