@@ -41,17 +41,20 @@ if(window.matchMedia("(min-width: 800px)").matches){
 
 // Controls the displaying of the menu information
 $("#about").on("click", function(){
-  $("#aboutSection").toggleClass("information-wrapper no_show")
+  $("#aboutSection").toggleClass("information-wrapper no_show");
+  $("#aboutSection").addClass("information-wrapper");
   $("#portfolioSection").addClass("no_show");
   $("#contactSection").addClass("no_show");
 });
 $("#portfolio").on("click", function(){
-  $("#portfolioSection").toggleClass("information-wrapper no_show")
+  $("#portfolioSection").toggleClass("information-wrapper no_show");
+  $("#portfolioSection").addClass("information-wrapper");
   $("#aboutSection").addClass("no_show");
   $("#contactSection").addClass("no_show");
 });
 $("#contact").on("click", function(){
-  $("#contactSection").toggleClass("information-wrapper no_show")
+  $("#contactSection").toggleClass("information-wrapper no_show");
+  $("#contactSection").addClass("information-wrapper")
   $("#aboutSection").addClass("no_show");
   $("#contactSection").addClass("no_show");
 });
