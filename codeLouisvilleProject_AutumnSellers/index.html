@@ -31,28 +31,16 @@
       </nav>
 
       <!--- information section for navigation menu  -->
-      <section>
-        <div id="aboutSection" class="hide">
+      <section class="hide">
+        <div id="aboutSection">
           <h2>About Clayton</h2>
           <p>Clayton pace is a designer based in the Louisville, Kentucky area. His passion for graphic design is based in layout designs, rebranding and logo design. </p>
         </div>
-        <div id="portfolioSection" class="hide">
+        <div id="portfolioSection">
           <h2>Clayton's Portfolio</h2>
           <img class="">
         </div>
       </section>
-
-      <!--- Image of louisville that transitions based on time --------->
-      <section class="louisvilleImage hide show_media_querie" id="background_div">
-        <section id="nightTime">
-          <img src="img/louisvilleNighttime.jpg" class="louisvilleImage" >
-        </section>
-        <section id="dayTime" class="hide">
-          <img src="img/louisvilleDaytime.jpeg" alt="" class="louisvilleImage">
-        </section>
-      </section>
-
-
 
 
 
@@ -67,27 +55,32 @@
                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
              </ol>
              <div class="carousel-inner">
-               <div class="carousel-item active">
-                 <!--- Image of louisville that transitions based on time --------->
+               <div class="carousel-item active text-center">
+
+                 <!--- empty div to hold place for background to be seen --------->
                  <section class="louisvilleImage">
-                   <section id="nightTime-carousel">
-                     <img src="img/louisvilleNighttime.jpg" class="louisvilleImage" >
-                   </section>
-                   <section id="dayTime-carousel">
-                     <img src="img/louisvilleDaytime.jpeg" alt="" class="louisvilleImage">
-                   </section>
+                   <div class="carousel-caption d-md-block">
+                     <h5>Click here to contact me!</h5>
+                   </div>
                  </section>
                </div>
+
+               <!-- About Clayton Pace -->
                <div class="carousel-item">
                  <img src="img/main_bio_image.jpg" class="d-block w-100 vh-100" alt="...">
                  <div class="carousel-caption d-md-block">
                    <h5>About Clayton</h5>
-                   <p>Clayton pace is a designer based in the Louisville, Kentucky area. His passion for graphic design is based in layout designs, rebranding and logo design.</p>
+                   <p>Clayton pace is a designer based in the Louisville, Kentucky area.</p>
                  </div>
                </div>
                <div class="carousel-item vh-100">
-                <a href="#">
-                   <img src="img/retail_redesign.jpg" class="d-block w-100 vh-100" alt="...">
+                <a href="#" >
+                    <div class="portfolio_section_container">
+                        <img class="retail_redesign portfolio_images" src="img/retail_redesign.jpg" alt="">
+                        <img class="cbc_logo_design portfolio_images" src="img/CBC_fixed.png" alt="">
+                        <img class="tk_trifold_design portfolio_images" src="img/tkTrifold.png" alt="">
+                        <img class="iu_bicentenial portfolio_images" src="img/stainglass_Window.png" alt="">
+                    </div>
                    <div class="carousel-caption d-md-block">
                      <h5>Clayton's Portfolio</h5>
                      <p>Click to see Clayton's full portfolio!</p>

@@ -12,13 +12,12 @@ function setImage(){
   bedTime.setMinutes(30);
 
 if(nowDate > wakeTime && nowDate < bedTime){
-      document.getElementById('nightTime').style.display = "none";
-      document.getElementById('nightTime-carousel').style.display = "none";
-      document.getElementById('dayTime').style.display = "block";
       document.getElementById("dayTime-link").style.display = "block";
       document.getElementById('nightTime-link').style.display = "none";
-  }
+      document.body.style.background = "url('./img/louisvilleDaytime.jpeg') center";
+      document.body.style.backgroundSize = "cover";
 };
+}
 
   // Control navigation, jump to carousel menu
   // This function is not needed for desktop view so the media query
@@ -35,8 +34,8 @@ window.onresize = function(){
 if(window.matchMedia("(min-width: 800px)").matches){
   $('body').ready(function(){
     $('#navigation-container').fadeIn('slow')
-  });
-}
+    });
+  }
 };
 
 // Controls the displaying of the menu information
