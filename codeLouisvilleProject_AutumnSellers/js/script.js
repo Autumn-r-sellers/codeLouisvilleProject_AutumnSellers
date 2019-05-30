@@ -40,11 +40,12 @@ if(window.matchMedia("(min-width: 800px)").matches){
 };
 
 // Controls the displaying of the menu information
+// Controls the displaying of the menu information
 $("#about").on("click", function(){
-  $("#aboutSection").toggleClass("no_show information-wrapper");
+  $("#aboutSection").toggleClass("hide information-wrapper");
   $("#aboutSection").addClass("information-wrapper")
-  $("#portfolioSection").addClass("no_show");
-  $("#contactSection").addClass("no_show");
+  $("#portfolioSection").addClass("hide");
+  $("#contactSection").addClass("hide");
 });
 $("#portfolio").on("click", function(){
   $("#portfolioSection").toggleClass("no_show information-wrapper");
