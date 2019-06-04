@@ -1,8 +1,4 @@
 // Sets the background of the opening div based upon the time of day
-window.onresize = function(){
-  location.reload();
-}
-
 setTimeout(setImage(), 3000);
 
 function setImage(){
